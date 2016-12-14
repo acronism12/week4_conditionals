@@ -37,9 +37,13 @@ def should_eat(food_type, season)
 end
 
 def volume_of_cube(side_length)
-  return side_length * side_length * side_length
+  return side_length**3
 end
 
 def volume_of_sphere(radius)
-  return (4*3.141592654*radius*radius*radius)/3
+  return (4*Math::PI*radius**3)/3
+end
+
+def convert_to_celsius(temp_in_f)
+  return ((temp_in_f-32)/9)*5
 end

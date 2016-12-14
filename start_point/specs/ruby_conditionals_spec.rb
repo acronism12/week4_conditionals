@@ -89,12 +89,13 @@ class ConditionalsPracticeTest < MiniTest::Test
     #Given the radius of a sphere calculate the volume
     def test_volume_of_sphere()
       result = volume_of_sphere(5)
-      assert_equal(523.598775, result)
+      assert_equal((500*(Math::PI))/3, result)
     end
 
     #Given a value in farenheit, convert this into celsius.
     def test_fahrenheit_to_celsius()
-      skip
+      result = convert_to_celsius(212)
+      assert_equal(100, result)
     end
 
 end
