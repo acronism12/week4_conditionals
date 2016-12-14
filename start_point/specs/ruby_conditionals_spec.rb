@@ -31,6 +31,7 @@ class ConditionalsPracticeTest < MiniTest::Test
   def test_returns_10_percent_for_normal_bank_account
     result = calculate_tax(100.00, "normal")
     assert_equal(10.00, result)
+    #assert_equal( 10.00, calculate_tax( 100.00, "normal"))
   end
 
   def test_returns_0_for_a_offshore_bank_account
@@ -65,19 +66,19 @@ class ConditionalsPracticeTest < MiniTest::Test
   # return false if "ice cream" and "winter",
   def test_icecream_in_winter_result
     result = should_eat("ice cream", "winter")
-    assert_equal("false", result)
+    assert_equal(false, result)
   end
 
   # return false if "hot chocolate" and "summer",
   def test_hot_chocolate_in_summer_result
     result = should_eat("hot chocolate", "summer")
-    assert_equal("false", result)
+    assert_equal(false, result)
   end
 
   # returns true in all other cases
   def test_all_other_cases
     result = should_eat("apples", "spring")
-    assert_equal("true", result)
+    assert_equal(true, result)
   end
 
   #Given the length of a side of a cube calculate the volume
